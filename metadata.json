@@ -1,0 +1,6 @@
+{
+  "name": "Nsambya Canteen POS",
+  "description": "Commercial Point of Sale, ward delivery ordering, payment verification, thermal receipt printing, daily cash reconciliation, and sales reporting for Nsambya Hospital Canteen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "nsambya-canteen-pos-netlify",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "netlify dev",
+    "db:init": "node --env-file=.env script/netlify-db-init.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.900.0",
+    "@aws-sdk/s3-request-presigner": "^3.900.0",
+    "bcryptjs": "^3.0.2",
+    "mysql2": "^3.15.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.12.0"
+  }
+}

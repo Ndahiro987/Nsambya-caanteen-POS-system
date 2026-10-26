@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #0f172a;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .font-mono,
+  .tabular-nums {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Print Styles for 80mm / 58mm Thermal Receipt Printers */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #thermal-receipt-print-area,
+  #thermal-receipt-print-area * {
+    visibility: visible;
+  }
+
+  #thermal-receipt-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 78mm;
+    margin: 0;
+    padding: 2mm 3mm;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px;
+    line-height: 1.25;
+    color: #000;
+    background: #fff;
+    box-shadow: none;
+    border: none;
+  }
+
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+}
